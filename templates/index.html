@@ -1,3 +1,4 @@
+{$ (use mendoza/template) $}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +10,7 @@
   </head>
   <body>
     <header><h1>{{ (dyn :title) }}</h1></header>
-    {{ {:template "menu.html"} }}
+    {{ {:template (from-file "templates/menu.html")} }}
     {{ content }}
   </body>
 </html>
